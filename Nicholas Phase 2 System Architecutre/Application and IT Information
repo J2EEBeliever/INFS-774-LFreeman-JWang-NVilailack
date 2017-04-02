@@ -2,3 +2,45 @@
 The 2020 Census future state architecture will modernize how data is shared and transferred between the systems. The modernization will consider the interoperability and interfacing elements such as data format, type, size, frequency and performance elements such as throughput, response time, and quality of service. In the current state, files were transferred manually using ad-hoc file transfer solutions, such as File Transfer Protocol (FTP), while the future state will utilize Enterprise Integration Patterns based on API, ESB, and Managed File Transfer (MFT) software to securely and efficiently share data across systems. The solution architecture diagrams for each test leading up to the 2020 Census lists the systems for each test and identifies their interfaces to each other. The arrows and their makings depict the type interface and of data being transferred as well as whether the transaction takes place via the ESB. Please refer to Appendix D: Product Release 2015 National Content Test, Appendix E: Product Release 2016 Census Test, Appendix F: Product Release Address Canvassing Test, Appendix G: Product Release 2017 Census Test, and Appendix H: Product Release 2020 Census to view the diagrams as well as the Interface 23 2020 Census Enterprise Architecture and Infrastructure Transition Plan Catalog referenced in Appendix C: References to view the interface catalog detailing the application interfaces. The general approach to updating the artifacts for each test and census will be similar. When the existing systems or new capabilities are tested the findings will be recorded as we anticipate that the findings will drive the need for additional enhancements or development of new solutions.
 3.5 IT Infrastructure Based on the Information Technology Infrastructure Library (ITIL) v3, IT infrastructure is a combined set of enablers, tools, procedures, and methods such as hardware, software, networks, and facilities that help develop, test, deliver, monitor, control or support IT services. ITIL provides a consistent approach to managing IT services resulting in cost reduction, improved IT services, customer experience, and improvement in the staff and technology productivity, enhanced delivery of third-party services. The US Census Bureau Decennial program in transitioning to the target 2020 Census Architecture focuses on using the industry best practices and seeks to leverage the approach in developing the IT Infrastructure. This document and the architecture document address the IT Infrastructure and at a high level and identify the systems that will use the enterprise cloud services. The enterprise cloud implementation strategy is currently under development. It will need to address the readiness of the cloud solution and the detailed strategy in meeting the 2020 solution architecture needs. Furthermore, a number of the interfaces are expected to use the ESB and web services in order to communicate and share files securely and efficiently. The solution architecture and the infrastructure relies on the US Census Security 24 2020 Census Enterprise Architecture and Infrastructure Transition Plan team to meet the security requirements and continue to be engaged with the program/project team in order to ensure that each system will meet the security requirements. To view a list of systems that will use the cloud technology and ESB please refer to Appendix K.4: Infrastructure Architecture. 
 The enterprise IT Infrastructure follows a plan for periodic technology refresh with its time lines, including compute resources, storage, network devices, system monitoring, and security appliances. In the current planning, there is also a strategy to do research for utilizing Cloud computing for IT Infrastructure. With the use of Cloud computing, system management and monitoring footprint must be extended to manage systems deployed in Cloud environments. In order to successfully support the 2020 Census, the technology refresh time lines must be aligned with the Census Tests timelines and 2020 Architecture Transition Plan so to ensure readiness of the infrastructure components for Census Tests and 2020 Census. This readiness is critical to the dependable operation of the IT applications within the 2020 Census Solution Architecture.
+5.2 Application Architecture
+The application architecture is the set of application areas identified to support the 2020 Census. It
+provides a context for system development or enhancement. Application areas represent a useful
+subdivision of activities, services, and data that can be linked to other objects in the architecture. They
+are a group of activities and entity types with strong interdependencies such that a single application or
+more than one application can support the area.
+The application architecture consists of both legacy application enhancements and new application
+development efforts. Projects such as CEDCaP will replace multiple legacy systems used during the 2010
+Decennial Census, while other legacy applications such as CIRA will remain to support the 2020
+Decennial Census.
+More details about the Application Architecture are found in Section 4.4 of the 2020 Census
+Architecture Document. The list of systems participating in the 2020 Census can be found in Appendix I:
+2020 Census Systems List. The list of outstanding questions that impact solutions can be found in
+Appendix J: Outstanding Decisions with Potential Impact on the Census Architecture. Figure 5-4 and
+Figure 5-5 show the 2020 Census Solution Architecture Model and the 2020 Census Support and
+Infrastructure Model. 
+
+5.6.2 Data Quality in Systems
+Various systems contribute to the quality aspect of the 2020 Census in two ways. The first way is
+through systems that support Quality Control. The Sampling, Matching, Reviewing, and Coding System
+(SMaRCS) application specifically supports quality control operations designed to determine whether
+field listers and enumerators are using validated procedures and collecting accurate data. The SMaRCS
+application will facilitate quality control operations by providing a mechanism for selecting quality
+control samples, validating production interview data against administrative records sources, and by
+providing a tool for clerical matching to compare the production interview data against re-interview (RI)
+data. SMaRCS will participate in Listing Quality Control by looking for "using validated procedures" and
+for falsification. SMaRCS will also serve as a major control component for quality control operations by
+managing the selection of quality control samples for field follow-up related to Census and Census
+Coverage Measurement (CM) operations and tracking the progress of the RI work through the matching,
+field, and resolution processes. Another example of QC is PRIMUS (which replaces Centurion) and MOCS
+which perform data validation from end to end.
+48 
+2020 Census Enterprise Architecture and Infrastructure Transition Plan
+The second way is through systems that have improved algorithms to support quality and efficiency
+modeling, such as in the Concurrent Analysis and Estimation System {CAES). The CAES will be an
+enterprise modeling platform which uses adaptive design to store data and uses it to execute statistical
+models in support of survey flow processing, analysis, and control. Systems such as the Control and
+Response Data System (CaRDS) (Post processing) will maximize the degree of completeness of the
+information by utilizing admin records. The CaRDS will act as the front and back door to data collection.
+It will pull personal or business data from the Census Master Address File and send it to MOCS. The
+Ca RDS will provide Universe determination for the Decennial, and post data collection response
+processing. 
